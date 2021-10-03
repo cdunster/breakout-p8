@@ -44,14 +44,14 @@ function move_pad()
 end
 
 function is_ball_hit(box_x,box_y,box_w,box_h)
-	local ball_b = ball_y+ball_r
-	local ball_t = ball_y-ball_r
-	local ball_r = ball_x+ball_r
-	local ball_l = ball_x-ball_r
-	if (ball_b < box_y) return false
-	if (ball_t > box_y+box_h) return false
-	if (ball_r < box_x) return false
-	if (ball_l > box_x+box_w) return false
+	local ball_bottom=ball_y+ball_r
+	local ball_top=ball_y-ball_r
+	local ball_right=ball_x+ball_r
+	local ball_left=ball_x-ball_r
+	if(ball_bottom<box_y)return false
+	if(ball_top>box_y+box_h)return false
+	if(ball_right<box_x)return false
+	if(ball_left>box_x+box_w)return false
 	return true
 end
 
